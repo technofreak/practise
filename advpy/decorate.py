@@ -14,7 +14,18 @@ def logtime(f):
         return v
     return decorated
 
-@logtime
+class LogTime:
+    def __init__(self, f):
+        self.f = f
+
+    def __call__(self, *x, **y):
+        start = time.time()
+        v = self.f(*x, **y)
+        timetaken = time.time() - start
+        print "%s took %.5f seconds" % (self.f.__name__+'('+str(x)+')', timetaken)
+        return v
+
+@LogTime
 def timepass(n):
     result = 0
     for i in range(n):
