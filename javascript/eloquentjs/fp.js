@@ -44,3 +44,11 @@ function countZeros(array) {
 	// counts the number of zeros in an array
 	return count(equals(0), array);
 }
+
+function map(func, array) {
+    var result = [];
+    forEach(array, function (element) {
+        result.push(func(element))
+    });
+    return result;
+}
