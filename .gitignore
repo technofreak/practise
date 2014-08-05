@@ -16,6 +16,9 @@ local.properties
 .settings/
 .loadpath
 
+# PyCharm / Sublime
+.idea
+
 # External tool builders
 .externalToolBuilders/
 
