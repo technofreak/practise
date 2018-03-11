@@ -170,3 +170,8 @@ pip-log.txt
 ## Go
 ######
 *.exe
+
+########
+## VS Code
+########
+.vscode/settings.json
